@@ -1,0 +1,23 @@
+//screens
+$breakpoints: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1260px);
+$container-max-widths: ("sm": 540px, "md":720px, "lg":960px, "xl":1200px);
+$containerGutter: 15px;
+
+//font
+$fontSize: 10px;
+$fontFamilyPrimary: 'Raleway', sans-serif;
+$fontFamilyPrimarySecond: 'Montserrat', sans-serif;
+
+//colors
+$gold: rgb(236, 203, 14);
+$pink: rgb(231, 184, 192);
+$blue: rgb(141, 141, 230);
+$green: rgb(112, 199, 112);
+$gray: #ccc;
+$blueviolet: rgb(85, 37, 131);
+$red: rgb(197, 62, 62);
+
+//grid gutters
+$colGutter: 1.5rem;
+$columnsCount: 12;
+$colWidth: 100%/$columnsCount;

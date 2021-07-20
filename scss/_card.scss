@@ -1,0 +1,105 @@
+.card {
+
+    &:hover {
+        .card__preview-hover {
+            opacity: 1;
+        }
+
+        .card__body {
+            background-color: #362f2d;
+
+            &::before {
+                border-color: transparent transparent #362f2d transparent;
+            }
+        }
+
+        .card__title {
+            color: #fff;
+        }
+
+        .card__category {
+            color: #c7b299;
+        }
+    }
+    
+    &__preview {
+        position: relative;
+
+        &-img {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.5);
+            transition: opacity .4s ease;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-link {
+            @extend %link;
+            font-size: 2.5rem;
+            color: #fff;
+            display: block;
+            transition: color .3s ease;
+
+            &:first-child {
+                margin-right: 2.8rem;
+            }
+
+            &:hover {
+                color: #c7b299;
+            }
+        }
+    }
+
+    &__body {
+        position: relative;
+        padding: 3rem;
+        background-color: #fbfaf8;
+        transition: all .3s ease;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 15px 10px 15px;
+            border-color: transparent transparent #fbfaf8 transparent;
+            position: absolute;
+            top: -10px;
+            left: 19px;
+            z-index: 5;
+            transition: all .3s ease;
+        }
+    }
+
+    &__title {
+        @extend %link;
+        font-size: 2rem;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #c7b299;
+        display: block;
+        transition: all .3s ease;
+    }
+
+    &__category {
+        font-family: $fontFamilyPrimarySecond;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: 300;
+        color: #d1d1d1;
+        transition: all .3s ease;
+    }
+}
